@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5E71F248-6AE2-4745-A857-B8424395F9DA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Block.cs" />
+    <Compile Include="BlueGhost.cs" />
+    <Compile Include="Bullet.cs" />
+    <Compile Include="Directions.cs" />
+    <Compile Include="HighScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HighScore.Designer.cs">
+      <DependentUpon>HighScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameForm.Designer.cs">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GhostAI.cs" />
+    <Compile Include="GhostCharacter.cs" />
+    <Compile Include="Maze.cs" />
+    <Compile Include="ItemOnScreen.cs" />
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pacman.cs" />
+    <Compile Include="PinkGhost.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GameForm.resx">
+      <DependentUpon>GameForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighScore.resx">
+      <DependentUpon>HighScore.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RedGhost.cs" />
+    <Compile Include="YellowGhost.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ammo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueGhost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fruit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pacman1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pacman2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PinkGhost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedGhost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowGhost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animation\frame1.png" />
+    <None Include="Resources\Animation\frame10.png" />
+    <None Include="Resources\Animation\frame2.png" />
+    <None Include="Resources\Animation\frame3.png" />
+    <None Include="Resources\Animation\frame4.png" />
+    <None Include="Resources\Animation\frame5.png" />
+    <None Include="Resources\Animation\frame6.png" />
+    <None Include="Resources\Animation\frame7.png" />
+    <None Include="Resources\Animation\frame8.png" />
+    <None Include="Resources\Animation\frame9.png" />
+    <None Include="Resources\Menu.png" />
+    <None Include="Resources\MenuHelp.png" />
+    <None Include="Resources\MenuAbout.png" />
+    <None Include="Resources\MenuEmpty.png" />
+    <None Include="Resources\MenuHighscore.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
